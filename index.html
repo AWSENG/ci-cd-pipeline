@@ -1,48 +1,66 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Simple Calculator</title>
+<title>Simple Calendar</title>
 </head>
 <body>
-<div id="calculator">
-<input type="text" id="input" />
-<br>
-<button type="button" id="add">+</button>
-<button type="button" id="subtract">-</button>
-<button type="button" id="multiply">*</button>
-<button type="button" id="divide">/</button>
-<br>
-<button type="button" id="clear">Clear</button>
-<button type="button" id="equal">=</button>
+<div id="calendar">
+<table>
+<thead>
+<tr>
+<th>Sunday</th>
+<th>Monday</th>
+<th>Tuesday</th>
+<th>Wednesday</th>
+<th>Thursday</th>
+<th>Friday</th>
+<th>Saturday</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>2</td>
+<td>3</td>
+<td>4</td>
+<td>5</td>
+<td>6</td>
+<td>7</td>
+</tr>
+<tr>
+<td>8</td>
+<td>9</td>
+<td>10</td>
+<td>11</td>
+<td>12</td>
+<td>13</td>
+<td>14</td>
+</tr>
+<tr>
+<td>15</td>
+<td>16</td>
+<td>17</td>
+<td>18</td>
+<td>19</td>
+<td>20</td>
+<td>21</td>
+</tr>
+<tr>
+<td>22</td>
+<td>23</td>
+<td>24</td>
+<td>25</td>
+<td>26</td>
+<td>27</td>
+<td>28</td>
+</tr>
+<tr>
+<td>29</td>
+<td>30</td>
+<td>31</td>
+</tr>
+</tbody>
+</table>
 </div>
-<script>
-function calculate() {
-var input = document.getElementById("input").value;
-var operator = document.getElementById("operator").value;
-var result = 0;
-
-if (operator == "+") {
-result = parseInt(input) + parseInt(document.getElementById("operand").value);
-} else if (operator == "-") {
-result = parseInt(input) - parseInt(document.getElementById("operand").value);
-} else if (operator == "*") {
-result = parseInt(input) * parseInt(document.getElementById("operand").value);
-} else if (operator == "/") {
-result = parseInt(input) / parseInt(document.getElementById("operand").value);
-}
-
-document.getElementById("result").innerHTML = result;
-}
-
-document.getElementById("add").addEventListener("click", calculate);
-document.getElementById("subtract").addEventListener("click", calculate);
-document.getElementById("multiply").addEventListener("click", calculate);
-document.getElementById("divide").addEventListener("click", calculate);
-document.getElementById("clear").addEventListener("click", function() {
-document.getElementById("input").value = "";
-document.getElementById("result").innerHTML = "";
-});
-document.getElementById("equal").addEventListener("click", calculate);
-</script>
 </body>
 </html>
